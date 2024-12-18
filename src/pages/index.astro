@@ -1,11 +1,20 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import mejson from '../assets/me.json';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+let me = mejson; 
 ---
 
 <Layout>
-	<Welcome />
+	<h1>{mejson.nombre}</h1>
+	<h2>{me.apellidos}</h2>
+	<h3>Profesion: {me.profesion}</h3>
+	<h3>Edad: {me.edad}</h3>
+	<h3>Fecha nacimieto: {me.fecha_nacimiento}</h3>
+	<h3>Estudios: </h3>
+	<h5>Email: {me.contacto.email}</h5>
+	<h5>Telefono: {me.contacto.telefono}</h5>
+	<h3>Estudios:</h3>
+	<h5>{me.estudios.Bachillerato}</h5>
+	<h5>{me.estudios.fp}</h5>
 </Layout>

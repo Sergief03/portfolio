@@ -1,0 +1,16 @@
+{
+    "nombre": "Sergio",
+    "apellidos":"Fernández Fernández",
+    "fecha_nacimiento":"15 de noviembre de 2006",
+    "edad":"18",
+    "profesion":"Estudiante",
+    "contacto":{
+        "telefono": "+34 603 012 979",
+        "email": "sergiofdez1511@gmail.com"
+    },
+    "estudios":{
+        "Bachillerato": "Bachillerato Tecnologico",
+        "fp": "FP de Grado Superior de Desarrollo de aplicaciones Web"
+    }
+
+}
