@@ -1,16 +1,21 @@
 {
-    "nombre": "Sergio",
-    "apellidos":"Fernández Fernández",
-    "fecha_nacimiento":"15 de noviembre de 2006",
-    "edad":"18",
-    "profesion":"Estudiante",
-    "contacto":{
-        "telefono": "+34 603 012 979",
-        "email": "sergiofdez1511@gmail.com"
-    },
-    "estudios":{
-        "Bachillerato": "Bachillerato Tecnologico",
-        "fp": "FP de Grado Superior de Desarrollo de aplicaciones Web"
-    }
+    "nombre": "Sergio Fernández",
+    "profesion":"Estudiante de Grado Superior de Desarrollo de Aplicaciones Web",
+    "bio":"Estudios de Bachillerato de ciencias Tecnologico, en el IES Luis Bueno Crespo en el curso escolar 2023/2024",
+    "experiencia":[
+        {
+            "titulo":"Desarrollo de Aplicaciones Web",
+            "descripcion":"En curso",
+            "fecha":"2024/2025"
+        },
+        {
+            "titulo":"Bachillerato",
+            "descripcion":"Hecho",
+            "fecha":"2023/2024"
+        }
+    ],
+    "habilidades":["Ingles B1","njbn"]
+
+
 
 }
