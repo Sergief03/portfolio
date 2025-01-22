@@ -1,0 +1,44 @@
+---
+import Github from "./icons/github.astro";
+import Instagram from "./icons/instagram.astro";
+import Linkedin from "./icons/linkedin.astro";
+---
+
+<footer>
+    <nav>
+        <ul>
+            <li><a href="https://www.instagram.com/sergief03/"><Instagram /></a></li>
+            <li><a href="https://github.com/Sergief03"><Github /></a></li>
+            <li><a href=""><Linkedin /></a></li>
+        </ul>
+    </nav>
+</footer>
+
+<style>
+    footer {
+        width: 100%;
+        background-color: #232323;
+        color: white ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    ul {
+        padding: 16px;
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        align-items: center;
+    }
+
+    ul {
+        width: fit-content;
+        padding: 16px;
+    }
+
+    li {
+        list-style: none;
+    }
+</style>
