@@ -1,18 +1,41 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import mejson from '../assets/me.json';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 let me = mejson; 
+
+interface Project{
+	title: string
+	description: string
+}
+
+const projects = await Astro.glob<Project>('./projects/*.md');
 ---
 
-<Layout>
-	<section class="hero">
-		<h1 class="nombre">{mejson.nombre}</h1>
-		<h2 class="profesion">{mejson.profesion}</h2>
-		<p>{mejson.bio}</p>
-	</section>
 
-	<section>
+<Layout>
+	<Header />
+ <section class="hero" id="inicio">
+     <h1 class="nombre">{mejson.nombre}</h1>
+     <h2 class="profesion">{mejson.profesion}</h2>
+     <p>{mejson.bio}</p>
+ </section>
+
+<section id="proyectos">
+    <h3>Proyectos</h3>
+    {projects.map((project) => (
+        <a href={project.url}>
+            <article class="proyecto">
+                <h4>{project.frontmatter.title}</h4>
+                <p>{project.frontmatter.description}</p>
+            </article>
+        </a>
+    ))}
+</section>
+
+	<section id="experiencia">
 		<h3>Experiencia</h3>
 		{mejson.experiencia.map((exp)=> ( 
 			<article class="experiencia">
@@ -25,7 +48,7 @@ let me = mejson;
 		
 	</section>
 
-	<section>
+	<section id="habilidades">
 		<h3>Habilidades</h3>
 		<div class="habilidad-container">
 			{mejson.habilidades.map ((hab)=> ( 
@@ -36,4 +59,6 @@ let me = mejson;
 		</div>
 		
 	</section>
+
+	<Footer />
 </Layout>
