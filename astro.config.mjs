@@ -1,6 +1,8 @@
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
+import vercel from '@astro/adapters/vercel';
 
 export default defineConfig({
-  outDir: './dist', // Asegúrate de que el directorio de salida sea el esperado
+  adapter: vercel(),  // Este es el adaptador que conecta tu proyecto con Vercel
 });
+
